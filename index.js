@@ -75,6 +75,13 @@ class Delivery {
             }.bind(this)
         );
     }
+    customer () {
+        return store.customers.find(
+            function(customer) {
+                return customer.id === this.customerId;
+            }.bind(this)
+        );
+    }
     // passenger() {
     //     return store.passengers.find(
     //         function(passenger) {
