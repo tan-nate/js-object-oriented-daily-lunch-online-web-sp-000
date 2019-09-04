@@ -82,6 +82,9 @@ class Meal {
     static byPrice() {
         return store.meals.sort((a, b) => a.price < b.price);
     }
+    meals() {
+      return [...new Set(store.meals.map(meal => meal.name))];
+    }
 }
 
 let deliveryId = 0;
