@@ -13,7 +13,7 @@ class Delivery {
         this.customerId = customerId;
 
         // insert in the item to the store
-        store.trips.push(this);
+        store.deliveries.push(this);
     }
     passenger() {
         return store.passengers.find(
