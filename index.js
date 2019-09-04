@@ -92,7 +92,7 @@ class Meal {
       return this.deliveries().map(delivery => delivery.customer());
     }
     byPrice() {
-        return MyData.sort(dynamicSort("price"));
+        return MyData.prototype.sort(dynamicSort("price"));
     }
 }
 
