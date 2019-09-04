@@ -45,7 +45,7 @@ class Meal {
         this.price = price;
 
         // insert in the item to the store
-        store.customers.push(this);
+        store.meals.push(this);
     }
 }
 
