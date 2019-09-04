@@ -68,6 +68,13 @@ class Delivery {
         // insert in the item to the store
         store.deliveries.push(this);
     }
+    meal () {
+        return store.meals.find(
+            function(meal) {
+                return meal.id === this.mealId;
+            }.bind(this)
+        );
+    }
     // passenger() {
     //     return store.passengers.find(
     //         function(passenger) {
