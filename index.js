@@ -44,7 +44,7 @@ class Customer {
     deliveries() {
         return store.deliveries.find(
             function(delivery) {
-                return delivery.id === this.deliveryId;
+                return delivery.customerId === this.id;
             }.bind(this)
         );
     }
