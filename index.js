@@ -51,11 +51,11 @@ class Customer {
     meals() {
         return this.deliveries().map(delivery => delivery.meal());
     }
-    // totalSpent() {
-    //     return this.meals().map(x => x.price).reduce(a,b){
-    //         return a + b
-    //     }, 0);
-    // }
+    totalSpent() {
+        return this.meals().map(x => x.price).reduce(a,b){
+            return a + b
+        }
+    }
 }
 
 let mealId = 0;
