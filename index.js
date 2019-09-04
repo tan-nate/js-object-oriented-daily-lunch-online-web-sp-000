@@ -25,9 +25,9 @@ class Neighborhood {
           }.bind(this)
       );
     }
-    // passengers() {
-    //     return store.trips.map(trip => trip.passenger());
-    // }
+    meals() {
+      return [...new Set(store.meals.map(meal => meal.name))];
+    }
 }
 
 let customerId = 0;
@@ -81,9 +81,6 @@ class Meal {
     }
     static byPrice() {
         return store.meals.sort((a, b) => a.price < b.price);
-    }
-    meals() {
-      return [...new Set(store.meals.map(meal => meal.name))];
     }
 }
 
