@@ -91,9 +91,9 @@ class Meal {
     customers() {
       return this.deliveries().map(delivery => delivery.customer());
     }
-}
-function byPrice() {
-    return meal.prototype.sort(dynamicSort("price"));
+    static byPrice() {
+        return meal.prototype.sort(dynamicSort("price"));
+    }
 }
 
 let deliveryId = 0;
