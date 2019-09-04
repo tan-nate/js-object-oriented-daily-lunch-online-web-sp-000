@@ -71,6 +71,9 @@ class Meal {
             }.bind(this)
         );
     }
+    customers() {
+      return this.deliveries().map(delivery => delivery.customer());
+    }
 }
 
 let deliveryId = 0;
