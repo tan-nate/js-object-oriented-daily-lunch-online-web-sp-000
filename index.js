@@ -14,7 +14,7 @@ function dynamicSort(property) {
             return b[property].localeCompare(a[property]);
         }else{
             return a[property].localeCompare(b[property]);
-        }        
+        }
     }
 }
 
