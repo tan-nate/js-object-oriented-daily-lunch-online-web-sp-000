@@ -64,6 +64,13 @@ class Meal {
         // insert in the item to the store
         store.meals.push(this);
     }
+    deliveries() {
+        return store.deliveries.filter(
+            function(delivery) {
+                return delivery.mealId === this.id;
+            }.bind(this)
+        );
+    }
 }
 
 let deliveryId = 0;
