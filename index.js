@@ -3,8 +3,6 @@ let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
 let neighborhoodId = 0;
 
-let deliveryId = 0;
-
 class Neighborhood {
     constructor(name) {
         this.id = ++neighborhoodId;
@@ -24,6 +22,8 @@ class Neighborhood {
         return store.trips.map(trip => trip.passenger());
     }
 }
+
+let deliveryId = 0;
 
 class Delivery {
     constructor(mealId, neighborhoodId, customerId) {
