@@ -82,6 +82,13 @@ class Delivery {
             }.bind(this)
         );
     }
+    neighborhood () {
+        return store.neighborhoods.find(
+            function(neighborhood) {
+                return neighborhood.id === this.neighborhoodId;
+            }.bind(this)
+        );
+    }
     // passenger() {
     //     return store.passengers.find(
     //         function(passenger) {
