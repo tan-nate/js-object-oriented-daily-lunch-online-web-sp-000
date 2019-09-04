@@ -18,6 +18,13 @@ class Neighborhood {
             }.bind(this)
         );
     }
+    customers() {
+      return store.customers.filter(
+          function(customer) {
+              return customer.neighborhoodId === this.id;
+          }.bind(this)
+      );
+    }
     // passengers() {
     //     return store.trips.map(trip => trip.passenger());
     // }
