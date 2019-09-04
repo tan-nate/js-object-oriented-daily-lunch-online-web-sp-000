@@ -11,13 +11,13 @@ class Neighborhood {
         // insert in the user to the store
         store.neighborhoods.push(this);
     }
-    // deliveries() {
-    //     return store.trips.filter(
-    //         function(trip) {
-    //             return trip.driverId === this.id;
-    //         }.bind(this)
-    //     );
-    // }
+    deliveries() {
+        return store.deliveries.filter(
+            function(delivery) {
+                return delivery.neighborhoodId === this.id;
+            }.bind(this)
+        );
+    }
     // passengers() {
     //     return store.trips.map(trip => trip.passenger());
     // }
