@@ -26,6 +26,7 @@ class Neighborhood {
       );
     }
     meals() {
+      const nonUniqueMeals = this.deliveries().map(delivery => delivery.meal().title)
       return [...new Set(store.meals.map(meal => meal.name))];
     }
 }
