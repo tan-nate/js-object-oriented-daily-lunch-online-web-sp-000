@@ -3,13 +3,14 @@ let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
 let neighborhoodId = 0;
 
-let tripId = 0;
+let deliveryId = 0;
 
-class Trip {
-    constructor(driver, passenger) {
+class Delivery {
+    constructor(mealId, neighborhoodId, customerId) {
         this.id = ++tripId;
-        this.driverId = driver.id;
-        this.passengerId = passenger.id;
+        this.mealId = mealId;
+        this.neighborhoodId = neighborhoodId;
+        this.customerId = customerId;
 
         // insert in the item to the store
         store.trips.push(this);
