@@ -11,16 +11,16 @@ class Neighborhood {
         // insert in the user to the store
         store.neighborhoods.push(this);
     }
-    deliveries() {
-        return store.trips.filter(
-            function(trip) {
-                return trip.driverId === this.id;
-            }.bind(this)
-        );
-    }
-    passengers() {
-        return store.trips.map(trip => trip.passenger());
-    }
+    // deliveries() {
+    //     return store.trips.filter(
+    //         function(trip) {
+    //             return trip.driverId === this.id;
+    //         }.bind(this)
+    //     );
+    // }
+    // passengers() {
+    //     return store.trips.map(trip => trip.passenger());
+    // }
 }
 
 let deliveryId = 0;
