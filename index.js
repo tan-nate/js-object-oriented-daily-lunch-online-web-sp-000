@@ -52,7 +52,7 @@ class Customer {
         return this.deliveries().map(delivery => delivery.meal());
     }
     totalSpent() {
-        return arr.reduce(function(a,b){
+        return this.reduce(function(a,b){
             return a + b
         }, 0);
     }
