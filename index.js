@@ -51,6 +51,11 @@ class Customer {
     meals() {
         return this.deliveries().map(delivery => delivery.meal());
     }
+    totalSpent() {
+      return arr.reduce(function(a,b){
+        return a + b
+      }, 0);
+    }
 }
 
 let mealId = 0;
