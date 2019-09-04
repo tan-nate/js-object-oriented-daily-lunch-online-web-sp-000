@@ -23,6 +23,19 @@ class Neighborhood {
     // }
 }
 
+let customerId = 0;
+
+class Customer {
+    constructor(name, neighborhoodId) {
+        this.id = ++customerId;
+        this.name = name;
+        this.neighborhoodId = neighborhoodId;
+
+        // insert in the item to the store
+        store.customers.push(this);
+    }
+}
+
 let deliveryId = 0;
 
 class Delivery {
