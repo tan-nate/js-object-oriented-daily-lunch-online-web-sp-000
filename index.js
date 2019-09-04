@@ -5,6 +5,26 @@ let neighborhoodId = 0;
 
 let deliveryId = 0;
 
+class Neighborhood {
+    constructor(name) {
+        this.id = ++neighborhoodId;
+        this.name = name;
+
+        // insert in the user to the store
+        store.neighborhoods.push(this);
+    }
+    deliveries() {
+        return store.trips.filter(
+            function(trip) {
+                return trip.driverId === this.id;
+            }.bind(this)
+        );
+    }
+    passengers() {
+        return store.trips.map(trip => trip.passenger());
+    }
+}
+
 class Delivery {
     constructor(mealId, neighborhoodId, customerId) {
         this.id = ++tripId;
@@ -28,25 +48,5 @@ class Delivery {
                 return driver.id === this.driverId;
             }.bind(this)
         );
-    }
-}
-
-class Neighborhood {
-    constructor(name) {
-        this.id = ++neighborhoodId;
-        this.name = name;
-
-        // insert in the user to the store
-        store.neighborhoods.push(this);
-    }
-    deliveries() {
-        return store.trips.filter(
-            function(trip) {
-                return trip.driverId === this.id;
-            }.bind(this)
-        );
-    }
-    passengers() {
-        return store.trips.map(trip => trip.passenger());
     }
 }
