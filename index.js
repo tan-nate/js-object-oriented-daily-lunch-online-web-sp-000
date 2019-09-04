@@ -41,6 +41,13 @@ class Customer {
         // insert in the item to the store
         store.customers.push(this);
     }
+    deliveries() {
+        return store.deliveries.find(
+            function(delivery) {
+                return delivery.id === this.deliveryId;
+            }.bind(this)
+        );
+    }
 }
 
 let mealId = 0;
