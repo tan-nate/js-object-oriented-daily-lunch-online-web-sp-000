@@ -49,7 +49,7 @@ class Customer {
         );
     }
     meals() {
-        return deliveries().map(delivery => delivery.meal());
+        return this.deliveries().map(delivery => delivery.meal());
     }
 }
 
