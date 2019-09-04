@@ -52,9 +52,9 @@ class Customer {
         return this.deliveries().map(delivery => delivery.meal());
     }
     totalSpent() {
-        return this.meals().map(x => x.price).reduce(a,b){
-            return a + b
-        }
+        return this.meals().map(meal => meal.price).reduce(function(a, b) {
+            return a + b;
+        });
     }
 }
 
